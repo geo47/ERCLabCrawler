@@ -1,0 +1,36 @@
+search:
+  list: ul#info\.search\.place\.list li
+  url_id: a[class=moreview] ::attr(href)
+  address: .addr > p ::attr(title)
+
+template:
+  name: //div[@id='mArticle']/div[@class='cont_essential']/div[1]//h2[@class='tit_location']
+  address: .txt_address
+  phone: .txt_contact
+  website: .link_homepage
+  rating: .ahead_info .num_rate
+  tabs:
+  review_tabs:
+  menus: .list_menu li
+  reviews: .list_evaluation li
+  blog_reviews: .list_review li
+
+menu:
+  title: .//div[@class='info_menu']/span[@class='loss_word']//text()
+  price: .//div[@class='info_menu']/em[@class='price_menu']/text()
+  load_more_btn: .cont_menu > .link_more
+  load_more_stop_btn: .link_close.link_more
+
+review:
+  rating: .//em[@class='num_rate']/text()
+  review: .//div[@class='comment_info']/p//text()
+  reviewer: .//div[@class='append_item']/a[@class='link_user']//text()
+  review_date: .//div[@class='append_item']/span[@class='time_write']//text()
+  total_review: .cont_evaluation .color_b
+  load_more_btn: //div[@id='mArticle']/div[@class='cont_evaluation']//div[@class='paging_mapdetail']/a[%s]
+  next_btn: .btn_next
+
+blog_review:
+  link: .//a/@href
+  load_more_btn: //div[@id='mArticle']/div[@class='cont_review']/div[@class='wrap_list']/a[@class='link_more']
+  load_more_stop_btn: //div[@id='mArticle']/div[@class='cont_review']/div[@class='wrap_list']/a[contains(@class, 'link_more') and contains(@class, 'link_close')]

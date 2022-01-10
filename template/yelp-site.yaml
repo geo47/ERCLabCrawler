@@ -1,0 +1,6 @@
+
+template:
+  menus: .menu-sections .u-space-b3 .menu-item
+
+menu:
+  title: .//div[@class='arrange_unit arrange_unit--fill menu-item-details']/h4%s//text()

@@ -1,0 +1,32 @@
+search:
+  list: .search_list li
+  url_id: ._btnAddress.item_address ::attr(data-cid)
+  address: //div[@id='ct']/div[2]/ul/li[%s]//div[@class='bx_address']//p//text()
+
+template:
+  name: //a[@id='_title']/span[@class='_3XamX']
+  address: ._2yqUQ
+  website: /html//div[@id='app-root']//div[@class='place_detail_wrapper']/div[4]/div/div[1]/div/ul//a
+  tabs: /html//div[@id='app-root']//div[@class='_3Sqkf']/a
+  review_tabs_len: /html//div[@id='app-root']//div[@role='tablist']/a
+  review_tabs: /html//div[@id='app-root']//div[@role='tablist']/a[%s]
+  menus: ._19NVP li
+  reviews: .F03SO li
+  blog_reviews: ._1fYfG li
+
+menu:
+  title: .//span[@class='_1zr5s']//text()
+  price: .//div[@class='_1cQ4a']//text()
+  load_more_btn: div:nth-of-type(4) a[role='button']
+
+review:
+  rating: .//div[@class='_212v_']/div[@class='_1FroI']/span[@class='ZWzx3']/em/@style
+  review: .//div[@class='_212v_']/div[@class='_1Gmh0']/a/span[@class='WoYOw']//text()
+  reviewer: .//div[@class='_212v_']/div[@class='_2ZnYw']/div[@class='SDNE1']/div[@class='_1UNKJ']/a//text()
+  review_date: .//div[@class='_212v_']/div[@class='_2ZnYw']/div[@class='SDNE1']/div[@class='_1UNKJ']/span[1]//text()
+  load_more_btn: ._2kAri > a[role='button']
+  total_review: /html//div[@id='app-root']//div[@class='place_detail_wrapper']/div[4]//span[@class='place_section_count']
+
+blog_review:
+  link: .//a/@href
+  load_more_btn: div:nth-of-type(4) a[role='button']
